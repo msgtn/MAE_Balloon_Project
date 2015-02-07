@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0072)http://www.gaerospace.com/projects/ULBDStratoSail/StratoSail_system.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Global Aerospace Corporation How the StratoSail(R) Balloon Trajectory Control System Works</title>
+
+<meta name="description" content="Global Aerospace Corporation is a maturing company with a highly motivated and innovative engineering and research team. We have interests in planetary and space science and technologies, lighter than air vehicles and balloons, advanced power systems, complex physical systems simulation and modeling, technology development, and the development of new concepts for the exploration and use of space.">
+<meta name="keywords" content="adaptive sampling, advanced concept, aeroassist, aerobot, aerobrake, aerocapture, aerodecelerator, aerodynamics, aerospace, aerothermodynamics, airship, Astrotel, balloon constellation, balloon guidance system, balloon network, balloon trajectory control, balloon, ballute, battery, blimp, consulting, DARPA, deorbit, Discovery, earth radiation budget, EDL, electric vehicle, entry descent and landing, GDIN, global constellation, GOLD, gravity assist, heat shield, highpower, human exploration, hurricane monitoring, HyperPASS, hypersonics, interplanetary, JPL, lighter than air, Lithium-ion, Lithium-ion battery, low-thrust, LTA, lunar, manned Mars missions, Mars balloon, Mars base, Mars transportation, Mars, Martian, MDA, mechanical design, microelectronics, microprobes, missile defense, mission design, Moon, NASA, orbit design, orbit, orbital debris, Phobos, planetary balloon, planetary mission consulting, planets, power system, radiometer, radiosonde, rechargeable, reentry, robotics, satellite deorbit, satellite, science, solar array, spacecraft, spaceport, SPB, StratoSail, StratoSat, stratosphere, superpressure balloon, technology requirements, telecommunications, thermal sciences, Titan, trajectory analysis, trajectory design, trajectory control, ULDB, Venus lander, Venus balloon, Venus, waverider, wind analysis, zonal flow, zonal winds">
+
+<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+<meta http-equiv="Pragma" content="no-cache">
+<meta name="rating" content="General">
+<meta name="ROBOTS" content="ALL">
+<meta name="copyright" content="Copyright by Global Aerospace Corporation;Except as otherwise noted, all information contained within the Global Aerospace Corporation website is copyrighted by Global Aerospace Corporation. To reprint or excerpt any of this material, either for publication or for another website, please contact Global Aerospace Corporation. Permission must be requested in writing.">
+<meta name="author" content="Ania of aniadesign.com">
+<meta name="language" content="en-us">
+<meta name="distribution" content="global">
+<meta name="revisit-after" content="15 days">
+<meta name="GENERATOR" content="http://www.toolshack.com">
+
+<!-- _*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_
+:::Created and maintained by aniadesign.com
+:::Contact aw@aniadesign.com
+_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_ -->
+
+
+
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<link href="./Global Aerospace Corporation How the StratoSail(R) Balloon Trajectory Control System Works_files/css1.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+<style type="text/css"></style></head>
+
+<body bgcolor="#FFFFFF" background="./Global Aerospace Corporation How the StratoSail(R) Balloon Trajectory Control System Works_files/bg.gif" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload="MM_preloadImages(&#39;../../imagesA/nav_buttons2_02.jpg&#39;,&#39;../../imagesA/nav_buttons2_03.jpg&#39;,&#39;../../imagesA/nav_buttons2_04.jpg&#39;,&#39;../../imagesA/nav_buttons2_05.jpg&#39;,&#39;../../imagesA/nav_buttons2_06.jpg&#39;,&#39;../../imagesA/nav_buttons2_07.jpg&#39;,&#39;../../imagesA/butt_consulting2.jpg&#39;)">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td valign="top"><table width="100%" height="290" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left"> 
+          <td height="15" colspan="2" valign="top" background="./Global Aerospace Corporation How the StratoSail(R) Balloon Trajectory Control System Works_files/top_strip_bg.jpg"><img src="./Global Aerospace Corporation How the StratoSail(R) Balloon Trajectory Control System Works_files/top_strip2.gif" width="750" height="15"></td>
+        </tr>
+        <tr> 
+          <td height="55" colspan="2" valign="top" background="./Global Aerospace Corporation How the StratoSail(R) Balloon Trajectory Control System Works_files/top_strip_lines_bg.jpg"><img src="./Global Aerospace Corporation How the StratoSail(R) Balloon Trajectory Control System Works_files/welcome.jpg" width="400" height="55"><img src="./Global Aerospace Corporation How the StratoSail(R) Balloon Trajectory Control System Works_files/top_strip_lines2.jpg" width="301" height="55"></td>
+        </tr>
+        <tr> 
+          <td width="79%" valign="top" background="./Global Aerospace Corporation How the StratoSail(R) Balloon Trajectory Control System Works_files/midd_strip_bg.jpg"><img src="./Global Aerospace Corporation How the StratoSail(R) Balloon Trajectory Control System Works_files/midd_strip2.jpg" width="750" height="35"></td>
+          <td width="21%" height="35" align="right" valign="top" background="./Global Aerospace Corporation How the StratoSail(R) Balloon Trajectory Control System Works_files/midd_strip_bg.jpg">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td height="135" colspan="2" valign="top"><table width="100%" height="135" border="0" cellpadding="0" cellspacing="0" background="./Global Aerospace Corporation How the StratoSail(R) Balloon Trajectory Control System Works_files/logo_picture2_05_bg.jpg">
+              <tbody><tr> 
+                <td align="left" valign="top"><img src="./Global Aerospace Corporation How the StratoSail(R) Balloon Trajectory Control System Works_files/logo_picture2_01.jpg" width="230" height="135"><img src="./Global Aerospace Corporation How the StratoSail(R) Balloon Trajectory Control System Works_files/logo_picture2_02.jpg" width="170" height="135"><img src="./Global Aerospace Corporation How the StratoSail(R) Balloon Trajectory Control System Works_files/logo_picture2_03.jpg" width="150" height="135"><img src="./Global Aerospace Corporation How the StratoSail(R) Balloon Trajectory Control System Works_files/logo_picture2_04.jpg" width="150" height="135"><img src="./Global Aerospace Corporation How the StratoSail(R) Balloon Trajectory Control System Works_files/logo_picture2_05.jpg" width="50" height="135"></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+        <tr> 
+          <td height="50" colspan="2" valign="top"><table width="100%" height="50" border="0" cellpadding="0" cellspacing="0" background="./Global Aerospace Corporation How the StratoSail(R) Balloon Trajectory Control System Works_files/nav_buttons_bg.jpg">
+              <tbody><tr> 
+                <td height="50" valign="top"><table width="751" border="0" cellpadding="0" cellspacing="0">
+                  <tbody><tr>
+                    <td><img src="./Global Aerospace Corporation How the StratoSail(R) Balloon Trajectory Control System Works_files/nav_buttons2_over_01.jpg" width="13" height="50" alt=""></td>
+                    <td><a href="http://www.gaerospace.com/index.html" target="_parent" onmouseover="MM_swapImage(&#39;Image1&#39;,&#39;&#39;,&#39;../../imagesA/nav_buttons2_02.jpg&#39;,1)" onmouseout="MM_swapImgRestore()"><img src="./Global Aerospace Corporation How the StratoSail(R) Balloon Trajectory Control System Works_files/nav_buttons2_over_02.jpg" alt="Home" name="Image1" width="123" height="50" border="0" id="Image1"></a></td>
+                    <td><a href="http://www.gaerospace.com/profile.html" target="_parent" onmouseover="MM_swapImage(&#39;Image2&#39;,&#39;&#39;,&#39;../../imagesA/nav_buttons2_03.jpg&#39;,1)" onmouseout="MM_swapImgRestore()"><img src="./Global Aerospace Corporation How the StratoSail(R) Balloon Trajectory Control System Works_files/nav_buttons2_over_03.jpg" alt="Profile" name="Image2" width="120" height="50" border="0" id="Image2"></a></td>
+                    <td><a href="http://www.gaerospace.com/projects.html" target="_parent" onmouseover="MM_swapImage(&#39;Image3&#39;,&#39;&#39;,&#39;../../imagesA/nav_buttons2_04.jpg&#39;,1)" onmouseout="MM_swapImgRestore()"><img src="./Global Aerospace Corporation How the StratoSail(R) Balloon Trajectory Control System Works_files/nav_buttons2_over_04.jpg" alt="Projects" name="Image3" width="120" height="50" border="0" id="Image3"></a></td>
+                    <td><a href="http://www.gaerospace.com/consulting.html"><img src="./Global Aerospace Corporation How the StratoSail(R) Balloon Trajectory Control System Works_files/butt_consulting.jpg" alt="Consulting" name="consulting" width="120" height="50" border="0" id="consulting" onmouseover="MM_swapImage(&#39;consulting&#39;,&#39;&#39;,&#39;../../imagesA/butt_consulting2.jpg&#39;,1)" onmouseout="MM_swapImgRestore()"></a></td>
+                    <td><a href="http://www.gaerospace.com/press.html" target="_parent" onmouseover="MM_swapImage(&#39;Image4&#39;,&#39;&#39;,&#39;../../imagesA/nav_buttons2_05.jpg&#39;,1)" onmouseout="MM_swapImgRestore()"><img src="./Global Aerospace Corporation How the StratoSail(R) Balloon Trajectory Control System Works_files/nav_buttons2_over_05.jpg" alt="Press" name="Image4" width="120" height="50" border="0" id="Image4"></a></td>
+                    <td><a href="http://www.gaerospace.com/employment.html" target="_parent" onmouseover="MM_swapImage(&#39;Image5&#39;,&#39;&#39;,&#39;../../imagesA/nav_buttons2_06.jpg&#39;,1)" onmouseout="MM_swapImgRestore()"><img src="./Global Aerospace Corporation How the StratoSail(R) Balloon Trajectory Control System Works_files/nav_buttons2_over_06.jpg" alt="Employment" name="Image5" width="120" height="50" border="0" id="Image5"></a></td>
+                    <td><a href="http://www.gaerospace.com/contact.html" target="_parent" onmouseover="MM_swapImage(&#39;Image6&#39;,&#39;&#39;,&#39;../../imagesA/nav_buttons2_07.jpg&#39;,1)" onmouseout="MM_swapImgRestore()"><img src="./Global Aerospace Corporation How the StratoSail(R) Balloon Trajectory Control System Works_files/nav_buttons2_over_07.jpg" alt="Contact" name="Image6" width="122" height="50" border="0" id="Image6"></a></td>
+                  </tr>
+                </tbody></table></td>
+                 
+              </tr>
+            </tbody></table></td>
+        </tr>
+      </tbody></table>
+      <table width="850" height="188" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr> 
+          <td width="150" rowspan="2" valign="top"><table width="150" height="350" border="0" cellpadding="0" cellspacing="0">
+              <tbody><tr> 
+                <td height="200" valign="top" background="./Global Aerospace Corporation How the StratoSail(R) Balloon Trajectory Control System Works_files/pict01.jpg">&nbsp;</td>
+              </tr>
+              <tr> 
+                <td height="150" valign="top" background="./Global Aerospace Corporation How the StratoSail(R) Balloon Trajectory Control System Works_files/pict02.jpg">&nbsp;</td>
+              </tr>
+            </tbody></table></td>
+          <td valign="top"><img src="./Global Aerospace Corporation How the StratoSail(R) Balloon Trajectory Control System Works_files/projects_head.jpg" width="400" height="45"> 
+          </td>
+        </tr>
+        <tr> 
+          <td valign="top"><table width="600" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tbody><tr>
+              <td align="center" valign="top">&nbsp;</td>
+            </tr>
+            <tr>
+              <td width="495" align="center" valign="top"><h1>How the StratoSail(R) Balloon Trajectory Control System Works</h1></td>
+            </tr>
+            <tr>
+              <td valign="top"><div class="divider"></div></td>
+            </tr>
+            <tr>
+              <td valign="top">&nbsp;</td>
+            </tr>
+              <tr> 
+                <td valign="top"> <table width="600" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tbody><tr> 
+                      <td align="center"><img src="./Global Aerospace Corporation How the StratoSail(R) Balloon Trajectory Control System Works_files/headerStratoSail.jpg" width="425" height="325"></td>
+                    </tr>
+                    <tr> 
+                      <td align="left" valign="top"><p>&nbsp; </p>
+                        <p> In the atmosphere, the winds blow at different speeds at different altitudes. Unlike at the surface, the winds almost never stop blowing at the high altitudes used by science balloons that fly in the stratosphere. Free flight balloons drift along at whatever speed the wind is blowing at their operating altitude. These winds, which we can count on to keep blowing, blow at different speeds at different altitudes. We plan to take advantage of these wind differences by hanging our BGS wing as much as 15 km (about 9 miles) below the balloon which will fly about 35 km (22 miles). This places the wing at least 20 km (12 miles) high or still about 10 km (6 miles) above Mount Everest and well above any commercial and most military aircraft.</p>
+                        <p> The wind at the balloon will usually be quite a bit faster than down where the wing is suspended. The wing will be dragged along faster than the wind where the wing is operating. By angling the wing to one side, the wing will pull off to that side. Because this pull is tugging on the tether, the balloon is also dragged off to that side. Of course, the wing can be angled to either side of the flight path.</p>
+                        <p> In comparison with the wind speed, this lateral drift velocity generated by the wing is quite small. This system cannot hold the balloon in a fixed place. But it can influence the flight path so that over several hours, an appreciable change in the final position can be achieved. The winds at these high altitudes tends to be mostly due east or due west depending on season and latitude. In most circumstances, the BGS can overcome the wind’s small drift either northward or southward. Thus, the BGS can keep the balloon always at the same latitude.</p>
+                        <p>Some long duration balloon flights have the potential 
+                          to go around the world many times. Often they must be 
+                          cut down early to avoid uncooperative countries, or 
+                          to be sure that the payload will come down over land 
+                          rather than ocean. If a BGS is used to keep the balloon 
+                          at the same latitude, it can return repeatedly to the 
+                          launch site. This is often the most convenient place 
+                          to land the balloon payload. Of course, situations can 
+                          always come up which force an emergency cut-down, but 
+                          if there is reasonable confidence that the balloon can 
+                          be controlled, one can wait another twenty days for 
+                          the balloon to come around to the launch site again. 
+                          This will tremendously increase the operational flexibility 
+                          of these long duration balloon flights.</p>
+                        <p> Scientific balloons often fly in the Arctic or Antarctic. In some cases this is simply to avoid danger to inhabited regions. Other times it is because of interesting phenomena, such as the hole in the ozone layer, which may be situated near the poles. It can be an advantage to have continuous sunlight in the summertime. But launching balloons from these remote regions can be very challenging. With a BGS aboard, one can launch from a more temperate site and then direct the balloon to the region of interest. In fact, one could launch in the Northern Hemisphere, command the balloon across the equator and go all the way to the South Pole, and then return back to the vicinity of the launch site. Such a flight would last many months. In fact, with advanced balloon materials, one could consider launching some balloons with the intent of flying them essentially indefinitely. Alternatively, a conventional zero pressure balloon could be launched from McMurdo Station in Antarctica and, by means of a BGS, operate very near the South Pole to minimize diurnal variations that result in reduced altitude variation. A balloon so equipped could be flown back to a landing near McMurdo reducing recovery logistics.</p>
+                        <table width="341" border="0" align="center" cellpadding="0" cellspacing="1">
+                          <tbody><tr> 
+                            <td><img src="./Global Aerospace Corporation How the StratoSail(R) Balloon Trajectory Control System Works_files/howItWorks.jpg" width="360" height="440"></td>
+                          </tr>
+                        </tbody></table>
+                        <p>&nbsp;</p>
+                        <p>&nbsp; </p></td>
+                    </tr>
+                    <tr> 
+                      <td align="left">&nbsp;</td>
+                    </tr>
+                    <tr> 
+                      <td align="left"><ul>
+                          <li><a href="http://www.gaerospace.com/projects/ULBDStratoSail/pdfs_docs/COSPAR2000StratoSail.pdf" target="_blank">COSPAR 2000 StratoSail(R) Balloon Guidance System Paper</a> </li>
+                          <li><a href="http://www.gaerospace.com/projects/ULBDStratoSail/StratoSail_scale_model.html">Scale Model 
+                            Test</a> </li>
+                          <li><a href="http://www.gaerospace.com/press.html">Read the Press Releases</a></li>
+                          <li><a href="http://www.gaerospace.com/projects/ULBDStratoSail/StratoSail_wing.html">See details of the 
+                            wing assembly</a> </li>
+                          <li><a href="http://www.gaerospace.com/projects/ULBDStratoSail/StratoSail_overview.html">Read about the 
+                            system</a> </li>
+                          </ul></td>
+                    </tr>
+                    <tr> 
+                      <td align="left">&nbsp;</td>
+                    </tr>
+                    <tr> 
+                      <td align="left">&nbsp;</td>
+                    </tr>
+                    <tr> 
+                      <td align="left">&nbsp;</td>
+                    </tr>
+                  </tbody></table>
+                  <p></p></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+        <tr> 
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+        </tr>
+      </tbody></table><!--WEBBOT bot="HTMLMarkup" startspan ALT="Site Meter" -->
+<script type="text/javascript" language="JavaScript">var site="s15gaero"</script>
+<a target="_top" href="http://www.sitemeter.com/stats.asp?site=s15gaero" id="idSiteMeterHREF"><img border="0" alt="Site Meter" src="./Global Aerospace Corporation How the StratoSail(R) Balloon Trajectory Control System Works_files/meter.asp"></a><iframe frameborder="0" width="0" height="0" src="about:blank" style="display: none !important; visibility: hidden !important; opacity: 0 !important; background-position: 0px 0px;"></iframe><script type="text/javascript" language="JavaScript1.2" src="./Global Aerospace Corporation How the StratoSail(R) Balloon Trajectory Control System Works_files/counter.js">
+</script>
+<noscript>
+&lt;a href="http://s15.sitemeter.com/stats.asp?site=s15gaero" target="_top"&gt;
+&lt;img src="http://s15.sitemeter.com/meter.asp?site=s15gaero" alt="Site Meter" border="0"/&gt;&lt;/a&gt;
+</noscript>
+<!-- Copyright (c)2002 Site Meter -->
+<!--WEBBOT bot="HTMLMarkup" Endspan -->
+
+
+      <p>&nbsp;</p></td>
+  </tr>
+  <tr> 
+    <td height="1" valign="top" bgcolor="#5a85a5"></td>
+  </tr>
+  <tr>
+    <td height="10" align="center" valign="top"><div class="copyrights"><script type="text/javascript" src="./Global Aerospace Corporation How the StratoSail(R) Balloon Trajectory Control System Works_files/copyrights.js"></script>© 2015 Global Aerospace Corporation, All rights reserved</div></td>
+  </tr>
+  <tr> 
+    <td height="20" valign="top" background="./Global Aerospace Corporation How the StratoSail(R) Balloon Trajectory Control System Works_files/bottom_strip.jpg">&nbsp;</td>
+  </tr>
+</tbody></table><script type="application/javascript" src="./Global Aerospace Corporation How the StratoSail(R) Balloon Trajectory Control System Works_files/analytics.js"></script>
+<!-- WiredMinds eMetrics tracking with Enterprise Edition V5.4 START -->
+<script type="text/javascript" src="./Global Aerospace Corporation How the StratoSail(R) Balloon Trajectory Control System Works_files/count.js"></script>
+<script type="text/javascript"><!--
+wm_custnum='22e70bbab82076b0';
+wm_page_name='StratoSail_system.html';
+wm_group_name='/services/webpages/g/a/gaerospace.com/public/projects/ULBDStratoSail';
+wm_campaign_key='campaign_id';
+wm_track_alt='';
+wiredminds.count();
+// -->
+</script>
+<!-- WiredMinds eMetrics tracking with Enterprise Edition V5.4 END -->
+
+
+<iframe scrolling="no" width="0" height="0" src="about:blank" style="display: none !important; visibility: hidden !important; opacity: 0 !important; background-position: 2px 2px;"></iframe></body><iframe frameborder="0" marginheight="0" marginwidth="0" scrolling="no" width="2" height="2" src="./Global Aerospace Corporation How the StratoSail(R) Balloon Trajectory Control System Works_files/log.html" style="display: none;"></iframe></html>
